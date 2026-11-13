@@ -4,10 +4,12 @@
 
 ## 覆盖范围
 
-- OpenAI 与 ChatGPT 相关域名
+- OpenAI、ChatGPT 与 Sora 相关域名和服务端点
 - Anthropic、Claude 与 Claude Code 相关域名
 - GeoSite 兜底规则：`anthropic`、`category-ntp`
 - 相关 CDN、认证、遥测、Persona 身份验证域名及 IP 兜底规则
+
+清单中的重复项及已被更广泛后缀或关键词规则覆盖的条目不会重复列出。
 
 规则会交给主配置中 `RULE-SET` 指定的策略组处理。请先在主配置中准备好对应的策略组。
 
