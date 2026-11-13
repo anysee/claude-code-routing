@@ -22,14 +22,13 @@ payload:
   - DOMAIN-SUFFIX,oaistatic.com
   - DOMAIN-SUFFIX,oaichatgpt.com
   - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
-  - DOMAIN-SUFFIX,auth0.com
   - DOMAIN-SUFFIX,livekit.io
   - DOMAIN-SUFFIX,livekit.cloud
   - DOMAIN-SUFFIX,arkoselabs.com
   - DOMAIN-SUFFIX,arkose.ai
   - DOMAIN-KEYWORD,openai
 
-  # Anthropic service domains
+  # Anthropic and Claude
   - DOMAIN-SUFFIX,anthropic.com
   - DOMAIN-SUFFIX,anthropic.org
   - DOMAIN-SUFFIX,anthropic.systems
@@ -41,11 +40,10 @@ payload:
   - DOMAIN-SUFFIX,claudemcpclient.com
   - DOMAIN-SUFFIX,claudemcpcontent.com
 
-  # GeoSite fallback
-  - GEOSITE,anthropic
-  - GEOSITE,category-ntp
+  # Shared authentication
+  - DOMAIN-SUFFIX,auth0.com
 
-  # CDN and authentication
+  # Anthropic CDN and website
   - DOMAIN,servd-anthropic-website.b-cdn.net
   - DOMAIN,anthropic.com.cdn.cloudflare.net
   - DOMAIN,anthropic-com.ghost.io
@@ -64,12 +62,16 @@ payload:
   - DOMAIN-SUFFIX,intercomcdn.com
   - DOMAIN,cdn.usefathom.com
 
-  # IP fallback
-  - IP-CIDR,160.79.104.0/21,no-resolve
-  - IP-CIDR6,2607:6bc0::/32,no-resolve
-  - IP-ASN,399358,no-resolve
-
   # Identity verification (KYC)
   - DOMAIN,maps.googleapis.com
   - DOMAIN-SUFFIX,withpersona.com
   - DOMAIN-SUFFIX,frompersona.com
+
+  # GeoSite fallback: keep after specific domain rules
+  - GEOSITE,anthropic
+  - GEOSITE,category-ntp
+
+  # IP fallback
+  - IP-CIDR,160.79.104.0/21,no-resolve
+  - IP-CIDR6,2607:6bc0::/32,no-resolve
+  - IP-ASN,399358,no-resolve
