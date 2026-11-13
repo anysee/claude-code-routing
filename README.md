@@ -30,9 +30,11 @@ rules:
   # 其他通用规则放在后面
 ```
 
+规则集内部先匹配明确列出的域名（包括 KYC 域名），再执行 GeoSite 兜底，最后执行 IP 兜底。这样 GeoSite 不会抢在具体域名规则之前匹配；主配置中也应将此 `RULE-SET` 放在通用规则之前。
+
 请将 `🤖 AI服务` 替换为你主配置中实际存在的策略组名称。使用 `GEOSITE` 规则时，确保 Mihomo 已配置可用的 GeoSite 数据；使用 `IP-ASN` 规则时，确保相应 ASN 数据库可用。`category-ntp` 会把匹配到的 NTP 域名也交给该策略组，网络策略需允许所需的 UDP/NTP 流量。
 
-Persona 身份验证（KYC）域名规则已启用。如不需要分流相关验证流量，可从规则文件中移除对应的 `maps.googleapis.com`、`withpersona.com` 和 `frompersona.com` 规则。`DOMAIN-SUFFIX,auth0.com` 已覆盖 `anthropic.auth0.com`，因此不重复列出该精确域名。
+Persona 身份验证（KYC）域名规则已启用。如不需要分流相关验证流量，可从规则文件中移除对应的 `maps.googleapis.com`、`withpersona.com` 和 `frompersona.com` 规则。共享认证域名部分的 `DOMAIN-SUFFIX,auth0.com` 已覆盖 `anthropic.auth0.com`，因此没有重复列出该精确域名。
 
 ## 说明
 
