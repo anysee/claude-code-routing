@@ -1,0 +1,49 @@
+# NAME: Claude Code
+# AUTHOR: Codex (generated for anysee)
+# REPO: https://github.com/anysee/claude-code-routing
+# UPDATED: 2026-11-13
+# DOMAIN: 6
+# DOMAIN-SUFFIX: 11
+# DOMAIN-KEYWORD: 3
+# IP-CIDR: 1
+# IP-CIDR6: 1
+# IP-ASN: 1
+# TOTAL: 23
+payload:
+  # Core domains
+  - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claude.com
+  - DOMAIN-SUFFIX,clau.de
+  - DOMAIN-SUFFIX,claudemcpclient.com
+  - DOMAIN-SUFFIX,claudemcpcontent.com
+  - DOMAIN-SUFFIX,claudeusercontent.com
+
+  # CDN, authentication, and content
+  - DOMAIN,servd-anthropic-website.b-cdn.net
+  - DOMAIN,anthropic.com.cdn.cloudflare.net
+  - DOMAIN,anthropic.auth0.com
+  - DOMAIN,anthropic-com.ghost.io
+
+  # Telemetry
+  - DOMAIN,browser-intake-us5-datadoghq.com
+  - DOMAIN-SUFFIX,sentry.io
+  - DOMAIN-SUFFIX,statsigapi.net
+  - DOMAIN-KEYWORD,datadog
+  - DOMAIN-KEYWORD,sentry
+  - DOMAIN-KEYWORD,sift
+
+  # Third-party widgets and analytics
+  - DOMAIN-SUFFIX,intercom.io
+  - DOMAIN-SUFFIX,intercomcdn.com
+  - DOMAIN,cdn.usefathom.com
+
+  # IP fallback
+  - IP-CIDR,160.79.104.0/21,no-resolve
+  - IP-CIDR6,2607:6bc0::/32,no-resolve
+  - IP-ASN,399358,no-resolve
+
+  # Optional KYC rules; enable only if needed, then update the counters above.
+  # - DOMAIN,maps.googleapis.com
+  # - DOMAIN-SUFFIX,withpersona.com
+  # - DOMAIN-SUFFIX,frompersona.com
