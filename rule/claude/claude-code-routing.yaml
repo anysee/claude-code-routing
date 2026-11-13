@@ -1,44 +1,65 @@
-# NAME: Claude Code
+# NAME: AI
 # AUTHOR: Codex (generated for anysee)
 # REPO: https://github.com/anysee/claude-code-routing
 # UPDATED: 2026-11-13
-# DOMAIN: 7
-# DOMAIN-SUFFIX: 13
-# DOMAIN-KEYWORD: 3
+# DOMAIN: 6
+# DOMAIN-SUFFIX: 32
+# DOMAIN-KEYWORD: 4
 # GEOSITE: 2
 # IP-CIDR: 1
 # IP-CIDR6: 1
 # IP-ASN: 1
-# TOTAL: 28
+# TOTAL: 47
 payload:
-  # Core domains
+  # OpenAI
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,openai.org
+  - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,chat.com
+  - DOMAIN-SUFFIX,ai.com
+  - DOMAIN-SUFFIX,oaiusercontent.com
+  - DOMAIN-SUFFIX,openaiusercontent.com
+  - DOMAIN-SUFFIX,oaistatic.com
+  - DOMAIN-SUFFIX,oaichatgpt.com
+  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+  - DOMAIN-SUFFIX,auth0.com
+  - DOMAIN-SUFFIX,livekit.io
+  - DOMAIN-SUFFIX,livekit.cloud
+  - DOMAIN-SUFFIX,arkoselabs.com
+  - DOMAIN-SUFFIX,arkose.ai
+  - DOMAIN-KEYWORD,openai
+
+  # Anthropic service domains
   - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,anthropic.org
+  - DOMAIN-SUFFIX,anthropic.systems
+  - DOMAIN-SUFFIX,anthropicusercontent.com
   - DOMAIN-SUFFIX,claude.ai
   - DOMAIN-SUFFIX,claude.com
   - DOMAIN-SUFFIX,clau.de
+  - DOMAIN-SUFFIX,claudeusercontent.com
   - DOMAIN-SUFFIX,claudemcpclient.com
   - DOMAIN-SUFFIX,claudemcpcontent.com
-  - DOMAIN-SUFFIX,claudeusercontent.com
 
   # GeoSite fallback
   - GEOSITE,anthropic
   - GEOSITE,category-ntp
 
-  # CDN, authentication, and content
+  # CDN and authentication
   - DOMAIN,servd-anthropic-website.b-cdn.net
   - DOMAIN,anthropic.com.cdn.cloudflare.net
-  - DOMAIN,anthropic.auth0.com
   - DOMAIN,anthropic-com.ghost.io
 
   # Telemetry
   - DOMAIN,browser-intake-us5-datadoghq.com
   - DOMAIN-SUFFIX,sentry.io
+  - DOMAIN-SUFFIX,statsig.com
   - DOMAIN-SUFFIX,statsigapi.net
   - DOMAIN-KEYWORD,datadog
   - DOMAIN-KEYWORD,sentry
   - DOMAIN-KEYWORD,sift
 
-  # Third-party widgets and analytics
+  # Shared widgets and analytics
   - DOMAIN-SUFFIX,intercom.io
   - DOMAIN-SUFFIX,intercomcdn.com
   - DOMAIN,cdn.usefathom.com
