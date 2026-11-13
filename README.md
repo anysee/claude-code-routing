@@ -21,9 +21,9 @@ rules:
   # 其他通用规则放在后面
 ```
 
-确保主配置使用 `mode: rule`。`IP-ASN` 规则需要 Mihomo 可用的 ASN 数据库。关键词规则 `datadog`、`sentry`、`sift` 是较宽泛的兜底，可能匹配到无关域名。Persona KYC 规则默认注释；如需启用，请取消注释并相应更新 YAML 头部的规则计数。
+确保主配置使用 `mode: rule`。GeoSite 规则需要 Mihomo 有可用的 GeoSite 数据库；`IP-ASN` 规则需要可用的 ASN 数据库。关键词规则 `datadog`、`sentry`、`sift` 是较宽泛的兜底，可能匹配到无关域名。
 
-本文件未包含 `GEOSITE,category-ntp`：那条规则会影响设备上的 NTP 流量，并依赖 UDP 代理能力，适合按需单独配置。
+KYC 规则已启用，会匹配 Google Maps 和 Persona 域名并送往所选策略组；若不需要分流验证相关流量，可按需移除这三条规则。`GEOSITE,category-ntp` 会将匹配到的 NTP 域名流量送往所选策略组，可能影响设备时间同步；请确认该策略组的网络出口允许 UDP/NTP 流量。
 
 ## 说明
 
